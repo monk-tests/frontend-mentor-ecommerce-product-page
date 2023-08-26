@@ -1,0 +1,120 @@
+.modal-pictures-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    position: absolute;
+    top: 0;
+    background-color: hsla(218, 12%, 13%, 0.861);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+.modal-product-image {
+    height: 550px;
+    aspect-ratio: 1;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+.modal-product-thumbnail-container {
+    height: 92px;
+    border-radius: 14px;
+    aspect-ratio: 1;
+    cursor: pointer;
+    position: relative;
+    /* display: flex;
+    gap: 12rem; */
+}
+.modal-product-thumbnail-container > img {
+    height: 100%;
+    border-radius: 10px;
+    transition: all 2s ease;
+}
+.modal-product-thumbnail-container.active {
+    border: 2px solid hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%);
+    position: relative;
+}
+.modal-product-thumbnail-container.active::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 237, 224, 0.719);
+    position: absolute;
+    left: 0;
+    border-radius: 12px;
+}
+.modal-product-thumbnail-container:hover::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 237, 224, 0.6);
+    position: absolute;
+    left: 0;
+    border-radius: 10px;
+}
+.modal-product-img-thumbnails {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 1.75rem;
+}
+
+.modal-slider-main {
+    display: flex;
+    width: 550px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+.modal-slider-controls {
+    position: relative;
+}
+.icon-close {
+    position: absolute;
+    right: 0rem;
+    top: -2em;
+    scale: 1.7;
+    fill: hsl(25, 100%, 94%);
+    cursor: pointer;
+    transition: fill 0.1s ease;
+}
+.icon-close:hover {
+    fill: hsl(26, 100%, 55%);
+}
+
+.modal-prev,
+.modal-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: hsl(25, 100%, 94%);
+    height: 56px;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 1000px;
+    display: grid;
+    place-items: center;
+}
+.modal-prev {
+    transform: translateX(-50%);
+}
+.modal-next {
+    right: 0%;
+    transform: translateX(50%);
+}
+.icon-prev,
+.icon-next {
+    stroke: hsl(220, 13%, 13%);
+    transition: stroke 0.2s ease;
+}
+.prev:hover > .icon-prev {
+    stroke: hsl(26, 100%, 55%);
+}
+.next:hover > .icon-next {
+    stroke: hsl(26, 100%, 55%);
+}

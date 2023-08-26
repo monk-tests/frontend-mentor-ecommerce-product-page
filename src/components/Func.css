@@ -1,0 +1,103 @@
+.main-container {
+    display: flex;
+    height: 8rem;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    flex-direction: column;
+    align-items: stretch;
+}
+.item-count-container {
+    background-color: hsl(223, 64%, 98%);
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+
+    flex-grow: 1;
+    /* flex-grow: 2; */
+
+    justify-content: space-between;
+}
+.add-to-cart {
+    flex-grow: 1;
+    /* flex-grow: 3; */
+}
+.icon-container {
+    cursor: pointer;
+    /* background-color: blue; */
+    padding: 2px 18px;
+    display: flex;
+    height: 100%;
+    place-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.icon-minus,
+.icon-plus {
+    fill: #ff7e1b;
+    pointer-events: none;
+}
+.icon-container:hover > .icon-plus,
+.icon-container:hover > .icon-minus {
+    fill: rgba(255, 126, 27, 0.7);
+}
+
+.item-count {
+    font-weight: 600;
+    font-family: inherit;
+}
+.add-to-cart {
+    /* background-color: hsl(26, 100%, 55%); */
+    background-color: #ff7d1a;
+    color: hsl(25, 100%, 94%);
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    -webkit-box-shadow: 0px 28px 35px -8px rgba(255, 125, 26, 0.27);
+    -moz-box-shadow: 0px 28px 35px -8px rgba(255, 125, 26, 0.27);
+    box-shadow: 0px 28px 35px -8px rgba(255, 125, 26, 0.27);
+}
+.add-to-cart:hover {
+    background-color: hsl(26, 100%, 65%);
+}
+.add-btn-cart-icon {
+    scale: 0.8;
+}
+
+@media (min-width: 568px) {
+    .main-container {
+        height: auto;
+        flex-direction: row;
+        /* align-items: center; */
+    }
+    .item-count-container {
+        padding: 16px 10px;
+        flex-grow: 2;
+    }
+    .add-to-cart {
+        flex-grow: 3;
+    }
+}
+
+@media (min-width: 1000px) {
+    .main-container {
+        height: auto;
+        flex-direction: row;
+        /* align-items: center; */
+    }
+    .item-count-container {
+        padding: 16px 10px;
+        flex-grow: 2;
+    }
+    .add-to-cart {
+        flex-grow: 3;
+    }
+}

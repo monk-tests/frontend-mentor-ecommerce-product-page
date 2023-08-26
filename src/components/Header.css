@@ -1,0 +1,211 @@
+/* header {
+    max-width: 1111px;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    gap: 4rem;
+    border-bottom: 1px solid hsla(220, 14%, 75%, 0.438);
+    height: 120px;
+}
+.logo {
+    align-self: center;
+}
+nav {
+    width: 100%;
+}
+nav > ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 2rem;
+    color: hsl(219, 9%, 45%);
+    height: 100%;
+}
+nav > ul > li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-options {
+    border-bottom: 1px solid hsla(26, 100%, 55%, 0);
+    height: 100%;
+    cursor: pointer;
+    transition: border 0.2s ease, font-weight 0.5s ease;
+
+
+    display: none;
+}
+.nav-options:hover {
+    border-bottom: 5px solid hsl(26, 100%, 55%);
+    height: 100%;
+    font-weight: 500;
+} */
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1rem;
+}
+.menu-icon {
+    margin-top: 2px;
+    cursor: pointer;
+}
+.user-icon {
+    /* margin-left: 1rem; */
+    width: 25px;
+    aspect-ratio: 1;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    /* align-items: center; */
+    /* justify-content: center; */
+    gap: 0.5rem;
+    color: hsl(219, 9%, 45%);
+    height: 100%;
+}
+.nav-options {
+    /* display: none; */
+}
+.navigation {
+    background-color: hsl(223, 64%, 98%);
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.icon-close-container {
+    padding: 2px 4px;
+    width: fit-content;
+    margin: 1.5rem 0 2rem 1.5rem;
+}
+.icon-close-phone {
+    background-color: hsl(223, 64%, 98%);
+    width: 60%;
+    fill: hsl(219, 9%, 45%);
+    width: auto;
+    /* padding: 0.25rem; */
+}
+.nav-options {
+    border-bottom: 1px solid hsla(26, 100%, 55%, 0);
+    /* height: 100%; */
+    cursor: pointer;
+    font-weight: 600;
+    transition: border 0.2s ease, font-weight 0.5s ease;
+    font-size: 1.125rem;
+    padding: 0.5rem 1.5rem;
+    color: hsl(0, 0%, 0%);
+}
+.navigation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: hsla(218, 12%, 13%, 0.704);
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.5s ease;
+    z-index: 4;
+    /* overflow: hidden; */
+}
+.navigation-container.active {
+    width: 100%;
+}
+
+nav {
+    margin-left: auto;
+}
+.ul-two {
+    display: flex;
+    gap: 1rem;
+}
+.cart {
+    display: flex;
+    align-items: center;
+}
+.cart-icon-container {
+    display: flex;
+    align-content: center;
+}
+.user-icon-container {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 860px) {
+    header {
+        max-width: 1111px;
+        margin: 0 auto;
+        display: flex;
+        align-items: stretch;
+        gap: 4rem;
+        border-bottom: 1px solid hsla(220, 14%, 75%, 0.438);
+        height: 120px;
+        padding: 0;
+    }
+    .logo {
+        align-self: center;
+    }
+    .menu-icon {
+        display: none;
+    }
+    .user-icon {
+        width: 50px;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+    }
+    nav ul {
+        align-items: center;
+        justify-content: center;
+    }
+    .navigation-container {
+        background-color: transparent;
+        position: static;
+        height: 100%;
+        width: auto;
+        overflow: hidden;
+        transition: width 0.5s ease;
+    }
+    .navigation .nav-options {
+        font-weight: 400;
+    }
+
+    .navigation {
+        background-color: transparent;
+        width: auto;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .nav-options {
+        border-bottom: 1px solid hsla(26, 100%, 55%, 0);
+        height: 100%;
+        cursor: pointer;
+        font-weight: 600;
+        transition: border 0.2s ease, font-weight 0.5s ease;
+        font-size: 1rem;
+        padding: 0rem 0rem;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        border-bottom: 4px solid hsla(26, 100%, 55%, 0);
+        border-top: 5px solid transparent;
+        transition: border-bottom 0.3s ease;
+    }
+    .nav-options:hover {
+        border-bottom: 4px solid hsl(26, 100%, 55%);
+    }
+    .icon-close-li {
+        display: none;
+    }
+    .ul-two {
+        margin-left: auto;
+        gap: 3rem;
+    }
+}
